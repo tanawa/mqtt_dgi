@@ -1,0 +1,143 @@
+.containerMain {
+    width: 80%;
+    height: 80vh;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.boxAnimation {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin-right: 20px;
+    background-color: #000;
+    display: inline-block;
+    border-radius: 90px;
+}
+
+.groupBox {
+    position: absolute;
+    width: 300px;
+    top: 50vh;
+    /*-----------*/
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+    display: none;
+}
+
+.displayAnimation {
+    animation-name: moveAnimation;
+    display: block;
+}
+
+.boxA {
+    top: 42vh;
+    left: 20vw;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    line-height: 110px;
+    display: block;
+    border-radius: 20px;
+    background: rgb(2, 0, 36);
+    z-index: 99;
+    text-align: center;
+    background: #FFF;
+    border: 2px solid #ff5733;
+}
+
+.boxA>i {
+    color: #ff5733;
+    font-size: 30pt;
+}
+
+.boxB {
+    top: 42vh;
+    right: 0vw;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    display: block;
+    border-radius: 20px;
+    z-index: 99;
+}
+
+.boxB>h3 {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: -50px;
+}
+
+@keyframes moveAnimation {
+    0% {
+        left: 20vw;
+    }
+
+    100% {
+        left: 100vw;
+    }
+}
+
+.electricity {
+    top: 40%;
+    margin: auto;
+    position: relative;
+    transform-origin: center;
+    width: 35px;
+    border-radius: 90px;
+    height: 35px;
+    background: rgb(2, 0, 36);
+    background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(76, 52, 200, 1) 0%, rgba(37, 40, 41, 1) 100%);
+    transition: all 0.5s ease;
+}
+
+.electricity::after {
+    border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+    position: absolute;
+    top: -90px;
+    content: '';
+    width: 40px;
+    height: 80px;
+    background-color: #057;
+    display: block;
+}
+
+.electricity::before {
+    border-radius: 50% 50% 50% 50% / 85% 85% 15% 15%;
+    top: 45px;
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 80px;
+    background-color: #057;
+    display: block;
+}
+
+@keyframes flow-electricity {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.baseFan {
+    margin-top: -50px;
+    margin-left: -50px;
+    transform: scale(0.5);
+    position: absolute;
+    z-index: 999;
+    background-color: #DDD;
+    width: 200px;
+    height: 200px;
+    border-radius: 90%;
+}

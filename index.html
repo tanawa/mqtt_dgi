@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MQTT Example</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mqtt/3.0.0/mqtt.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+	<div class="containerMain">
+		<div class="boxA">
+			<i class="fa fa-flash"></i>
+		</div>
+
+		<div class="boxB">
+			<h3 id="message">none</h3>
+			<div class="baseFan">
+				<div class="electricity"></div>
+			</div>
+		</div>
+
+		<div class="groupBox">
+			<div class="boxAnimation">
+			</div>
+
+			<div class="boxAnimation">
+			</div>
+
+			<div class="boxAnimation">
+			</div>
+
+			<div class="boxAnimation">
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<button id="btnMQTT">
+			click
+		</button>
+	</div>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
